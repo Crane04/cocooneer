@@ -1,0 +1,273 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocooneer</title>
+
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="shortcut icon" href="{% static 'assets/img/navbar/fav.jpg' %}"  type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-------   Header star ------>
+  <header class="header-area">
+    <div class="navbar-area">
+      <!---- navbar star--->
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img class="image" src="{% static 'assets/img/header/logo/logo.png' %}" alt="">
+              <!-- Cocooneer -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" data-scroll-nav="0" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-scroll-nav="1" href="#f_eatures">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-scroll-nav="2" href="#a_bout">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-scroll-nav="6" href="#down_load">Download</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!---- navbar end--->
+    <div class="header-hero" data-scroll-index="0">
+      <!---- home star ------>
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+      <div class="shape shape-6"></div>
+      <div class="container">
+        <div class="row align-items-center justify-content-center justify-content-lg-between">
+          <div class="col-lg-6 col-md-10">
+            <div class="header-hero-content">
+              <h1 class="header-title wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.2s">
+                <span>Your Safety</span> could be in your own hands!</h1>
+              <p class="text wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.4s">
+                Cocooneer is a Voice activated personal safety app that keeps tracks of Users Location and Movement in realtime. Cocooneer also alert your loved ones whenever emergency 
+                arises. It is fully synchronous with the Law Enforcement Agency (Police, etc).
+              </p>
+              <ul class="d-flex">
+                <li><a href="#down_load" class="main-btn wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.8s">Download
+                    App</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="header-image">
+              <img src="{% static 'assets/img/header/coco.jpg' %}" alt="" class="image-1  wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0.5s">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+      </div>
+    </div>
+    <!---- home star ------>
+  </header>
+  <!--------   Header End ----  -->
+
+  <!-- ------- Feature Section Start ---------- -->
+  <section class="feature-section pt-80" data-scroll-index="1" id="f_eatures">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-7">
+          <div class="section-title text-center mb-30">
+            <h1 class="mb-25  wow fadeInUp" data-wow-delay=".2s">Awesome <span> Features</span></h1>
+            <!-- <p class="wow fadeInUp" data-wow-delay=".4s">Cocooneer has the </p> -->
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+{% for feature in features %}
+        <div class="col-lg-4">
+          <div class="single-feature wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.2s">
+            <div class="icon color-{{feature.icon_color}}">
+              <i class="{{feature.font_awesome_icon}}" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+              <h3>{{feature.title}}</h3>
+              <p>{{feature.body}}
+              </p>
+            </div>
+          </div>
+        </div>
+  {% endfor %}
+  </div>
+</div>
+</div>
+</div>
+
+  </section>
+  <!-- ------- Feature Section End ---------- -->
+
+  <!-- ----------- About Section Start --------- -->
+  <section class="about-area pt-70 pb-120" data-scroll-index="2" id="a_bout">
+    <div class="container"><br><br><br><br>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="about-image wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.5s">
+            <div class="about-shape"></div>
+            <img src="{% static 'assets/img/about/cocooneer.jpg' %}" alt="" class="app">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-content mt-50 wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0.5s">
+            <div class="section-title">
+              <h1 class="title">Keep track of your Journeys</h1>
+              <p class="text">
+                  With Cocooneer's background service, you can get to set an emergency alert protocol which sends alert every 15 Minutes.
+              </p>
+            </div>
+            <a href="" class="main-btn">Download App</a>
+          </div>
+        </div>
+      </div>
+    </div>  <br>  <br>  <br>  
+  </section>
+  <!-- ----------- About Section End --------- -->
+
+  <br><br><br>
+  <!-- ----------- Download Section Start ------- -->
+  <section class="download-area pt-70 pb-40" data-scroll-index="6" id="down_load">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-9">
+          <div class="download-image mt-50 wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.5s">
+            <div class="download-shape-1"></div>
+            <img src="{% static 'assets/img/download/coco2.jpg' %}" alt="" class="image-3">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="download-content mt-45 wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0.5s">
+            <h1 class="title">Why a Personal Security App is a "Must Have".</h1>
+            <p class="text">
+              There are lots of untraced Kidnaps, killings that has been happening in the past months - If only those victims have a body guard App to rely on;
+              they might be alive by now.
+            </p>
+            <!-- <form action="" method="post">  -->
+              <button id="download_btn" onclick="download()">Download on Android</button>
+            <!-- </form> -->
+          </div>
+        </div>
+      </div>
+    </div><br><br><br>
+  </section>
+  <!-- ----------- Download Section End ------- -->
+  <!-- --------------Footer Section Start ------- -->
+  <footer class="footer-area" id="#footer">
+    <div class="footer-shape shape-1"></div>
+    <div class="footer-shape shape-2"></div>
+    <div class="footer-shape shape-3"></div>
+    <div class="footer-shape shape-4"></div>
+    <div class="footer-shape shape-5"></div>
+    <div class="footer-shape shape-6"></div>
+    <div class="footer-widget pt-30 pb-80">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-about mt-50">
+              <a href="" class="logo">
+                <img src="{% static 'assets/img/header/logo/logo.png' %}" alt="">
+              </a>
+              <p class="text">
+                Share With Us How <span style="color:crimson;">Cocooneer </span>impacted your Life. <br>
+                Send your Video/ Audio/ Voice record to <a href="mailto:cocooneer@gmail.com">cocooneer007@gmail.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="footer-link d-flex flex-wrap">
+              <div class="footer-link-wrapper mt-45">
+                <div class="footer-title">
+                  <h4 class="title">Quick Links</h4>
+                </div>
+                <ul class="link">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#f_eatures">Features</a></li>
+                  <li><a href="#a_bout">About</a></li>
+                  <li><a href="#down_load">Download</a></li>
+                </ul>
+              </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-contact mt-45">
+              <div class="footer-title">
+                <h4 class="title">Contact Us</h4>
+              </div>
+              <ul class="contact-list">
+                <li>
+                  <div class="contact-info">
+                    <div class="info-content media-body">
+                      <p class="text"><i class="fa fa-phone"></i>
+                        +2349069005441 </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-info">
+                    <div class="info-content media-body">
+                      <p class="text"><a href=""><i class="fa fa-envelope"></i>
+                          cocooneer007@gmail.com </a></p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-info">
+                    <div class="info-content media-body">
+                      <p class="text"><a href=""><i class="fa fa-globe"></i>
+                          www.cocooneer.pythonanywhere.com </a></p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="lo-lg-12">
+            <div class="copyright">
+              <div class="copyright-text text-center">
+                <p class="text">&copy; Cocooneer 2023,</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- --------------Footer Section End ------- -->
+
+
+<script src="{%static 'assets/js/app.js' %}"></script>
+</body>
+</html>
